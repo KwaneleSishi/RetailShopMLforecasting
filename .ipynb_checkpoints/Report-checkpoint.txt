@@ -1,0 +1,30 @@
+
+
+Model Comparison,Insights and Recommendations 
+
+1. ARIMA Model
+Results: The ARIMA forecast shows a slight decrease in units sold.
+Strengths: ARIMA effectively captures short-term trends based on past data. It works well when the data is stationary, as confirmed by the ADF test results showing a low p-value (indicating stationarity).
+Weaknesses: The small forecasted decrease might indicate that the model struggles to capture long-term changes or non-linear patterns in the data. The forecast might not be as responsive to upcoming external factors or seasonality shifts.
+
+Insights for Shop Owners:
+Short-term Strategy: With the slight forecasted decrease in sales, shop owners might want to be conservative with restocking. Focus on selling existing stock while keeping an eye on short-term trends.
+Monitoring Trends: Ensure that the shop’s inventory is aligned with immediate needs, especially if the ARIMA forecast is showing slight reductions in sales.
+
+2. LSTM Model
+Results: The LSTM model was complex with an LSTM layer and two dense layers, but the training process showed high loss values (root mean squared error around 32).
+Strengths: LSTM is great for capturing long-term dependencies and complex, non-linear relationships in the data. However, your model might require further tuning to reduce the error and improve accuracy.
+Weaknesses: The high loss suggests that the model has not yet achieved optimal performance and could be overfitting or underfitting. More epochs or hyperparameter tuning might be necessary to improve the predictions.
+
+Insights for Shop Owners:
+Focus on Long-term Patterns: Even with the higher error, the LSTM model is valuable for understanding longer-term trends. If fine-tuned, it can provide insights into shifts in customer behavior and product demand over time.
+Inventory and Sales Strategy: Use the LSTM model to look for trends in customer preferences, and gradually adjust stock levels based on the predicted longer-term demand. Consider optimizing product offerings based on recurring high-demand periods.
+
+3. Prophet Model
+Results: The Prophet forecast predicts an increase in units sold in the upcoming months.
+Strengths: Prophet excels at capturing seasonality and trends, especially with clear upper and lower confidence bounds. Its predictions for increased sales suggest growing demand.
+Weaknesses: Prophet assumes constant seasonality, so any sudden shifts or one-off events may not be accurately reflected in the forecast.
+
+Insights for Shop Owners:
+Prepare for Increased Demand: The forecasted increase in sales suggests that shop owners should stock up on high-demand products. This is especially crucial if the increase corresponds to a seasonal event or holiday period.
+Adjust Operations for Growth: Consider scaling up operations—hiring temporary staff, increasing marketing efforts, or expanding product offerings—to take advantage of the expected demand surge
